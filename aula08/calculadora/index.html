@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Aula 08 - Calculadora</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+    <section class="row">
+        <div class="col-md-4 offset-md-4">
+
+            <table class="mt-5 table table-dark table-bordered">
+                <tr>
+                    <td id="visor" colspan="4" class="text-right" style="font-size: 32pt;">0</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        <button id="limpar" class="btn btn-block btn-dark">C</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="multiplicar" class="btn btn-block btn-dark">*</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="dividir" class="btn btn-block btn-dark">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <button id="numero7" class="btn btn-block btn-dark">7</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero8" class="btn btn-block btn-dark">8</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero9" class="btn btn-block btn-dark">9</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="subtrair" class="btn btn-block btn-dark">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <button id="numero4" class="btn btn-block btn-dark">4</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero5" class="btn btn-block btn-dark">5</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero6" class="btn btn-block btn-dark">6</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="somar" class="btn btn-block btn-dark">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">
+                        <button id="numero1" class="btn btn-block btn-dark">1</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero2" class="btn btn-block btn-dark">2</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="numero3" class="btn btn-block btn-dark">3</button>
+                    </td>
+                    <td rowspan="2" class="text-center">
+                        <button id="resultado" class="btn btn-block btn-dark" style="height: 100px;">=</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        <button id="numero0" class="btn btn-block btn-dark">0</button>
+                    </td>
+                    <td class="text-center">
+                        <button id="ponto" class="btn btn-block btn-dark">.</button>
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+    </section>
+
+    <script src="js/eventos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atividade Carro</title>
+</head>
+<body>
+	<form>
+	<label for="placa">Placa:</label>
+	<input id="placa" type="text" name="placa" pattern="[A-Z]{3}[0-9]{1}[A-Z0-9]{1}[0-9]{2}" placeholder="XXX-9999">
+
+	<br><br>
+	<label for="cor">Cor:</label>
+	<select id="cor" name="cor">
+		<option>Azul</option>
+		<option>Vermelho</option>
+		<option>Branco</option>
+		<option>Preto</option>
+		<option>Prata</option>
+	</select>
+	<br><br>
+	<label for="anoFabri">Ano:</label>
+	<input id="anoFabri" type="number" name="ano" min="1990" max="2010" placeholder="Fabricado">
+
+	<br><br>
+	<label for="anoModelo">Ano:</label>
+	<input id="anoModelo" type="number" name="ano" min="1990" max="2010" placeholder="Modelo">
+
+	<br><br>
+	<label for="marca">Marca:</label>
+	<select id="marca">
+		<option>Chevrolet</option>
+		<option>Fiat</option>
+		<option>Ford</option>
+	</select>
+	<br><br>
+	<label for="modelo">Modelo:</label>
+	<select id="modelo">
+		<option>Camaro</option>
+		<option>MOBI</option>
+		<option>Fiesta</option>
+	</select>
+	<br><br>
+	<button>Enviar</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Aula 02</title>
+</head>
+<body>
+	<form action="" method="get">
+		<label for="nome">Nome: </label>
+		<input id="nome" type="text" name="nome" placeholder="Digite aqui" minlength="10" maxlength="30"> 
+		<br><br>
+		<label for="email">Email: </label>
+		<input id="email" type="email" name="email" placeholder="Digite aqui">
+		<br><br>
+		<label for="senha">Senha: </label>
+		<input id="senha" type="password" name="senha" placeholder="Digite aqui">
+		<br><br>
+		<label for="idade">Idade:</label>
+		<input id="idade" type="number" name="idade">
+		<br><br>
+		<label for="data">Data:</label>
+		<input id="data" type="date" name="data_nasc">
+		<br><br>
+		<label for="cor">Cor:</label>
+		<input id="cor" type="color" name="cor">
+		<br><br>
+		<label for="renda">Renda Familiar:</label>
+		<input id="renda" type="range" name="renda" min="1" max="5">
+		<br><br>
+		<label for="hora">Hora:</label>
+		<input id="hora" type="time" name="hora">
+		<br><br>
+		<strong>Frutas que eu gosto:</strong>
+		<br>
+		<label for="banana">Banana</label>
+		<input id="banana" type="checkbox" name="frutas[]" value="Banana">
+		<br>
+		<label for="maca">Maça</label>
+		<input id="maca" type="checkbox" name="frutas[]" value="Maça">
+		<br>
+		<label for="abacaxi">Abacaxi</label>
+		<input id="abacaxi" type="checkbox" name="frutas[]" value="Abacaxi">
+		<br><br>
+		<strong>Genero:</strong>
+		<br>	
+		<label for="masculino">Masculino</label>
+		<input id="masculino" type="radio" name="genero" value="Masculino">
+		<br>
+		<label for="feminino">Feminino</label>
+		<input id="feminino" type="radio" name="genero" value="Feminino">
+		<br><br>
+		<label for="foto">Foto do Perfil:</label> 
+		<input id="foto" type="file" name="foto">
+		<br><br>
+		<label for="endereco">Endereço:</label>
+		<textarea id="endereco" name="endereco" placeholder="Digite aqui"></textarea>
+		<br><br>
+		<label for="cidade">Cidade:</label>
+		<select id="cidade" name="cidade">
+			<option value="" selected disabled>&nbspSelecione </option>
+			<option value="fortaleza-ce">Fortaleza</option>
+			<option value="caucaia-ce">Caucaia</option>
+			<option value="maranguape-ce">Maranguape</option>
+			<option value="eusebio-ce">Eusebio</option>
+		</select>
+
+
+
+
+		<br><br>
+		<button>Pesquisar</button>
+
+	</form>
+</body>
+</html>

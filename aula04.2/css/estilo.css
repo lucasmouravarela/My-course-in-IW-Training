@@ -1,0 +1,205 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: 'Roboto';
+}
+
+i.material-icons {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+.botao {
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    width: 15%;
+    height: 100%;
+    position: absolute;
+}
+
+.sidebar > .topo {
+  padding: 15px;
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.sidebar > .topo > a {
+  float: right;
+  color: #ffffff;
+}
+
+.sidebar > .topo > .nome_usuario {
+   margin-top: 40px;
+   display: block;
+   text-align: center;
+   font-size: 1.3em;
+}
+
+.sidebar > .topo > .email_usuario {
+   margin-top: 5px;
+   color: #bbbbbb;
+   display: block;
+   text-align: center;
+}
+
+.sidebar > .topo > img {
+  width: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  border: 8px solid #ffffff;
+  transform: rotateY(0deg);
+  transition: 1s;
+}
+
+.sidebar > .topo > img:hover {
+  transform: rotateY(180deg);
+  transition: 1s;
+}
+
+.sidebar > nav {
+    margin-top: 30px;
+}
+
+.sidebar > nav > span {
+  display: block;
+  padding-left: 20px;
+  text-transform: uppercase;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.sidebar > nav > a {
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  color: #333333;
+  width: 85%;
+  border-radius: 0 20px 20px 0;
+  transition: 0.5s;
+}
+
+.sidebar > nav > a:hover {
+  background-color: #dddddd;
+  padding-left: 50px;
+  transition: 0.5s;
+}
+
+.sidebar > nav > a.selecionada {
+  background-color: #4C299F;
+  color: #ffffff;
+}
+
+body > main {
+  margin-left: 15%;
+}
+
+body > main > header {
+  background-color: #eeeeee;
+  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.4);
+  min-height: 90px;
+}
+
+.sair {
+  padding: 20px;
+  float: right;
+  background-color: #872525;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.sair:hover {
+  background-color: #5e1919;
+}
+
+.conteudo {
+  padding-left: 15px;
+}
+
+.botao_novo {
+  padding: 15px;
+  color: #ffffff;
+  background-color: #4C299F;
+  margin-top: 10px;
+  display: inline-block;
+  transform: scale(1);
+  transition: 1s;
+}
+
+.botao_novo:hover {
+  background-color: #2d185f;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.conteudo > hr {
+  width: 96%;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.caixa_tabela {
+  background-color: #ffffff;
+  width: 96%;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+table.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.tabela > thead > tr > th {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+  text-align: left;
+}
+
+table.tabela > tbody > tr > td {
+  padding: 10px;
+}
+
+table.tabela > tbody > tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+
+table.tabela > tbody > tr:hover {
+  background-color: #dddddd;
+  transform: scale(1.02);
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.botao_amarelo {
+  background-color: #e5c500;
+  padding: 8px;
+}
+
+.botao_amarelo:hover {
+  color: #ffffff;
+  background-color: #998300;
+}
+
+.botao_vermelho {
+  background-color: #a94f47;
+  padding: 8px;
+  color: #ffffff;
+}
+
+.botao_vermelho:hover {
+  background-color: #763731;
+}

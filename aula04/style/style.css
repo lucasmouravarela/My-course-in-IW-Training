@@ -1,0 +1,158 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: #f8f8f8;
+}
+.sidebar{
+	background-color: #ffffff;
+	box-shadow: 1px 0px 5px 0px rgba(0,0,0,0.3);
+	width: 15%;
+	height: 100%;
+	position: absolute;
+}
+
+.sidebar .topo{
+	padding: 10px;
+	background-color: #555555;
+	color: #ffffff;
+}
+
+.sidebar .topo a{
+	float: right;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.sidebar .nome-usuario{
+	margin-top: 50px;
+	display: block;
+	text-align: center;
+}
+
+.sidebar .email-usuario{
+	color: #bbbbbb;
+	display: block;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.sidebar .topo img{
+	display: block;
+	margin: 20px auto 0;
+	width: 100px;
+	border-radius: 50%;
+	border: 2px solid #ffffff;
+}
+
+.sidebar nav{
+	margin-top: 30px;
+}
+
+.sidebar > nav > span{
+	display: block;
+	padding-left: 20px;
+	text-transform: uppercase;
+	color: #555555;
+	margin-bottom: 20px;
+}
+
+.sidebar nav > a{
+	display: block;
+	text-decoration: none;
+	padding: 5px;
+	padding-left: 20px;
+	color: #333333;
+	width: 85%;
+	border-radius: 0% 15% 15% 0;
+}
+
+.sidebar nav a:hover{
+	background-color: #dddddd;
+}
+
+.sidebar nav > a.selecionada{
+	background-color: #4C299F;
+	color: #ffffff;
+}
+
+body > main{
+	margin-left: 15%;
+	
+}
+
+body > main > header{
+	background-color: #eeeeee;
+	box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.2);
+	min-height: 90px;
+}
+
+.sair{
+	padding: 20px;
+	float: right;
+	text-decoration: none;
+	background-color: #872525;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.sair:hover{
+	background-color: #5e1919;
+}
+
+.conteudo{
+	padding-left: 15px;
+}
+
+.botao-novo{
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px;
+	color: #ffffff;
+	background-color: #4C299F;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.botao-novo:hover{
+	background-color: #2d185f;
+}
+
+.conteudo > hr{
+	width: 96%;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.caixa-tabela{
+	background-color: #ffffff;
+	width: 95%;
+	box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+}
+
+table.tabela{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.tabela > thead > tr > th{
+	background-color: #333333;
+	color: #ffffff;
+	padding: 10px;
+	text-align: left;
+}
+
+table.tabela > tbody > tr > td{
+	padding: 10px;
+}
+
+table.tabela > tbody > tr:nth-child(even){
+	background-color: #eeeeee;
+}
+
+table.tabela > tbody > tr:hover{
+	background-color: #dddddd;
+}
