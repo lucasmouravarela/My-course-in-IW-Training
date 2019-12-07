@@ -2,8 +2,14 @@ let memoria = 0;
 let memoria2 = 0;
 
 function digitoIsOperador() {
-    let ultimoDigito = 
-}
+    let ultimoDigito = document.getElementById('visor').innerHTML.substr(-1);
+  
+    if (ultimoDigito === '-' || ultimoDigito === '+' || ultimoDigito === '/' || ultimoDigito === '*') {
+        return true;
+    }
+  
+    return false;
+  }
 
 for (let numero = 0; numero <= 9; numero++) {
     document.getElementById('numero'+numero).addEventListener('click', function () {
@@ -30,7 +36,7 @@ document.getElementById('limpar').addEventListener('click', function () {
 document.getElementById('somar').addEventListener('click', function (){
     memoria = parseFloat(document.getElementById('visor').innerHTML);
 
-    if (document.getElementById('visor').innerHTML.substr(-1) === '+') {
+    if (digitoIsOperador()) {
         return;
     }
     
@@ -56,7 +62,7 @@ document.getElementById('resultado').addEventListener('click', function () {
 document.getElementById('subtrair').addEventListener('click', function (){
     memoria = parseFloat(document.getElementById('visor').innerHTML);
 
-    if (document.getElementById('visor').innerHTML.substr(-1) === '-') {
+    if (digitoIsOperador()) {
         return;
     }
 
