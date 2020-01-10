@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 12 - Aplicação Web</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="container" style="background-color: #dddddd;">
+
+    <section class="row">
+        <div class="col-md-12 mt-5 card card-body">
+            <h1>Meus Contatinhos</h1>
+            <hr>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <input id="buscar" class="form-control" placeholder="Buscar">
+                </div>
+                
+                <div class="col-md-8">
+                    <div class="text-right">
+                        <button data-toggle="modal" data-target="#modal_cadastro" class="btn btn-primary btn-lg">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <table class="mt-2 table table-hover table-striped">
+                <thead class="thead-dark">
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody id="tabela-contatos">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div id="modal_cadastro" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Novo Contatinho</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="form_cadastro">
+            <div class="modal-body">
+              <p class="alert alert-info">Preencha corretamente os dados.</p>
+              
+              <label for="nome">Nome: </label>
+              <input type="text" id="nome" class="form-control form-control-lg"requied>
+
+              <label for="email">Email: </label>
+              <input type="email" id="email" class="form-control form-control-lg" requied>
+
+              <label for="telefone">Telefone: </label>
+              <input type="text" id="telefone" class="form-control form-control-lg" requied>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-primary">Enviar</button>
+            </div>
+            </form> 
+          </div>
+        </div>
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/eventos.js"></script>
+</body>
+</html>
