@@ -13,10 +13,13 @@ function atualizarTabela () {
                 <td>${cadaContato.email}</td>
                 <td>${cadaContato.telefone}</td>
                 <td>
+                <button data-id="${indice}" data-action="confirmar-excluir" class="d-none btn btn-outline-danger btn-sm">
+                    Confirmar
+                </button>
                 <button data-id="${indice}" data-action="excluir" class="btn btn-danger btn-sm">
                     <i class="material-icons">clear</i>
                 </button>
-                <button class="btn btn-warning btn-sm">
+                <button data-id="${indice}" data-action="editar" class="btn btn-warning btn-sm">
                     <i class="material-icons">edit</i>
                 </button>
                 </td>
@@ -60,6 +63,20 @@ $('#buscar').keyup(function () {
 $(document).on('click', '[data-action="excluir"]', function () {
     let indice = $(this).attr('data-id');
 
+    $(`button[data-id="${indice}"][data-action$="confirmar-excluir"]`).removeClass('d-none');
+    $(this).addClass('d-none');
+});
+
+$(document).on('mouseout', '[data-action="confirmar-excluir"]', function (){
+    $('[data-action="confirmar-excluir"]').addClass('d-none');
+    $('[data-action="excluir"]').removeClass('d-none');
+});
+
+
+
+$(document).on('click', '[data-action="confirmar-excluir"]', function () {
+    let indice = $(this).attr('data-id');
+
     let contatinhos = JSON.parse(
         localStorage.getItem('contatinhos')
     );
@@ -70,3 +87,41 @@ $(document).on('click', '[data-action="excluir"]', function () {
 
     atualizarTabela();
 });
+
+$(document).on('click', '[data-action="editar"]', function (){
+    $('#listagem').fadeOut();
+    $('#editar').fadeIn();
+
+    let indice = $(this).attr('data-id');
+
+    let contatinhos = JSON.parse(
+        localStorage.getItem('contatinhos')
+    );
+
+    $('#editar_nome').val(contatinhos[indice].nome);
+    $('#editar_email').val(contatinhos[indice].email);
+    $('#editar_telefone').val(contatinhos[indice].telefone);
+
+    $('#form_editar').submit(function (evento) {
+        evento.preventDefault();
+
+        contatinhos[indice] = {
+            nome: $('#editar_nome').val(),
+            email: $('#editar_email').val(),
+            telefone: $('#editar_telefone').val()
+        };
+
+        localStorage.setItem('contatinhos', JSON.stringify(contatinhos));
+
+        atualizarTabela();
+        $('#listagem').fadeIn();
+        $('#editar').fadeOut();
+    });
+});
+
+$('#editar_cancelar').click(() => {
+    $('#listagem').fadeIn();
+    $('#editar').fadeOut();
+});
+
+
