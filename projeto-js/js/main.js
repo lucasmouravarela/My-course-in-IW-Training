@@ -2,16 +2,24 @@ const API_URL = 'https://taskmanager-iwtraining.firebaseio.com';
 
 calendar();
 
+function resetMenu(opcaoSelecionada) {
+    document.querySelectorAll('[data-action="menu"]').forEach((cadaOpcao) => {
+      cadaOpcao.classList.add('btn-outline-primary');
+      cadaOpcao.classList.remove('btn-primary');
+    });
+  
+    document.getElementById(opcaoSelecionada).classList.remove('btn-outline-primary');
+    document.getElementById(opcaoSelecionada).classList.add('btn-primary');
+  }
+
+
 document.getElementById('btn-agenda').addEventListener('click', () => {
     document.getElementById('main').innerHTML = '';
     calendar();
 
     location.assign('#agenda');
 
-    document.getElementById('btn-agenda').classList.remove('btn-outline-primary');
-    document.getElementById('btn-agenda').classList.add('btn-primary');
-    document.getElementById('btn-config').classList.remove('btn-primary');
-    document.getElementById('btn-config').classList.add('btn-outline-primary');
+    resetMenu('btn-agenda');
 });
 
 document.getElementById('btn-config').addEventListener('click', () => {
@@ -19,8 +27,13 @@ document.getElementById('btn-config').addEventListener('click', () => {
 
     location.assign('#config');
 
-    document.getElementById('btn-config').classList.remove('btn-outline-primary');
-    document.getElementById('btn-config').classList.add('btn-primary');
-    document.getElementById('btn-agenda').classList.remove('btn-primary');
-    document.getElementById('btn-agenda').classList.add('btn-outline-primary');
+    resetMenu('btn-config');
 });
+
+document.getElementById('btn-places').addEventListener('click', () => {
+    places();
+  
+    location.assign('#locais');
+  
+    resetMenu('btn-places');
+  });
