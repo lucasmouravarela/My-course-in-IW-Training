@@ -13,6 +13,7 @@
     "@fullcalendar/daygrid": "^4.3.0",
     "@fullcalendar/interaction": "^4.3.0",
     "bootstrap": "^4.4.1",
+    "gijgo": "^1.9.13",
     "jquery": "^3.4.1",
     "material-icons": "^0.3.1"
   }
