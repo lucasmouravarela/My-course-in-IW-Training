@@ -68,6 +68,8 @@ function calendar()
     let calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: [ 'dayGrid', 'interaction' ],
     selectable: true,
+    locale: 'pt-br',
+    eventClick: (evento) => excluirEvento(evento),
     dateClick: (info) => {
       document.getElementById('form-evento-dia').value = info.dateStr;
 
@@ -86,6 +88,7 @@ function calendar()
         let cadaEvento = resposta[id];
 
         calendar.addEvent({
+          id: id,
           title: cadaEvento.nome,
           start: cadaEvento.inicio,
           end: cadaEvento.termino
@@ -131,4 +134,18 @@ return calendar.render();
 
 function fecharModal() {
   $('#modal-novo-evento').modal('hide');
+}
+
+function excluirEvento (evento) {
+  if (confirm('Excluir?')){
+    let id = evento.event._def.publicId;
+
+    $.ajax({
+      url: API_URL+`/eventos/${id}.json`,
+      type: 'DELETE',
+      success: (response) => {
+        calendar();
+      }
+    })
+  }
 }
