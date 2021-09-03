@@ -1,2 +1,1 @@
-# My-course-in-IW-Training
-These are my contents of the Front End Course.
+Primeiro repositório, conhecendo o **GitHub** e o **Git**.
