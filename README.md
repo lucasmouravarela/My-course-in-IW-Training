@@ -65,19 +65,3 @@ Se você participou do mesmo curso ou deseja contribuir com melhorias, siga os p
    git push origin minha-contribuicao
    ```
 4. Abra um Pull Request descrevendo as mudanças.
-
----
-
-## **Contato**
-Caso tenha dúvidas ou sugestões, entre em contato através do e-mail: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
-
----
-
-## **Licença**
-Este repositório está sob a licença MIT. Consulte o arquivo `LICENSE` para mais informações.
-
----
-
-Acompanhe este repositório e veja a evolução no aprendizado e nas práticas de desenvolvimento front-end! 🚀
-
-Se precisar de algo mais ou alterações, é só avisar! 😊
